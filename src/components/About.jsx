@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { ImPointRight } from "react-icons/im";
 const About = () => {
   return (

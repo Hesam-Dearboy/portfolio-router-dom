@@ -2,6 +2,7 @@ import React from 'react'
 import memoji from '../assets/memoji.mp4'
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
 import {Link} from 'react-scroll'
+import TypeWriterEffect from 'react-typewriter-effect'
 
 const Home = () => {
   return (
@@ -11,10 +12,32 @@ const Home = () => {
         <div className=' max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row text-white'> 
             <div className=' flex flex-col justify-center h-full  '>
                 <h2 className=' text-4xl sm:ml-4 sm:text-7xl font-bold text-white static-txt  '> Hi , I'm Hesam Azizpour </h2>
-                <p className='text-4xl sm:text-7xl font-bold text-orange-500  font-signature mt-[-20px] hidden md:block '>Dear Boy</p>
-                  <p className=' typing-demo text-gray-400 max-w-md py-6 text-2xl '>
+                <p className='text-4xl sm:text-7xl font-bold text-orange-500   font-signature mt-[-20px] hidden md:block '>Dear Boy</p>
+                <div className='  my-5 text-gray-500 text-2xl '>
+                        <TypeWriterEffect
+                        
+                        textStyle={{
+                          
+                          fontWeight: 600,
+                          fontSize: '1.5em',
+                        }}
+                        startDelay={2000}
+                        cursorColor="#3F3D56"
+                        multiText={[
+                          
+                          'A Designer based on Iran.',
+                          'A Front-End Developer based on Iran.',
+                          'A Back-End Developer based on Iran.',
+                          'A Programmer based on Iran.'
+                        ]}
+                        multiTextDelay={1000}
+                        typeSpeed={30}
+                        loop={true}
+                        />
+                </div>
+                  {/* <p className=' typing-demo text-gray-400 max-w-md py-6 text-2xl '>
                     Programer based on Iran.  
-                   </p>
+                   </p> */}
                   <div>
                     <Link
                       to="portfolio"
