@@ -1,7 +1,7 @@
 import React from 'react'
 import memoji from '../assets/memoji.mp4'
 import {MdOutlineKeyboardArrowRight} from 'react-icons/md'
-import {Link} from 'react-scroll'
+import {Link} from 'react-router-dom'
 import TypeWriterEffect from 'react-typewriter-effect'
 
 const Home = () => {
@@ -34,15 +34,9 @@ const Home = () => {
                         typeSpeed={30}
                         loop={true}
                         />
-                </div>
-                  {/* <p className=' typing-demo text-gray-400 max-w-md py-6 text-2xl '>
-                    Programer based on Iran.  
-                   </p> */}
-                  <div>
+                
                     <Link
-                      to="portfolio"
-                      smooth
-                      duration={500}
+                      to="/portfolio"
                       className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-yellow-600 to-orange-500 cursor-pointer"
                     >
                       Portfolio

@@ -1,27 +1,27 @@
 import React , {useState} from 'react'
 import {FaBars , FaTimes} from 'react-icons/fa'
-import {Link} from 'react-scroll'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
     const [nav, setNav] = useState(false)
 
 
   return (
-    <div className=' flex justify-between items-center w-full h-20 text-white fixed bg-transparent backdrop-blur-md	 px-4'>
+    <div className=' flex justify-between items-center w-full h-20 text-white fixed  bg-transparent  backdrop-blur-md	 px-4'>
         
         
         <div>
             <h1 className=' text-orange-400
-             font-signature text-5xl ml-2 '>Dear Boy</h1>
+             font-signature text-5xl ml-2 '> <Link to='/'>Dear Boy</Link></h1>
         </div>
 
 
         <ul className=' hidden md:flex '>
-            <li  className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='home' smooth duration={500}>Home</Link> </li>
-            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='about' smooth duration={500}>about</Link> </li>
-            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='portfolio' smooth duration={500}>Portfolio</Link> </li>
-            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='experience' smooth duration={500}>experience</Link> </li>
-            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='contact' smooth duration={500}>Contact</Link> </li>
+            <li  className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='/'>Home</Link> </li>
+            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='/about'>About</Link> </li>
+            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='/portfolio'>Portfolio</Link> </li>
+            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='/experience'>Experience</Link> </li>
+            <li className=' px-4 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200 hover:border-b-2 border-yellow-400'> <Link to='/contact'>Contact</Link> </li>
              </ul>
 
 
@@ -30,22 +30,20 @@ const Navbar = () => {
             </div>
 
 
-
+           
          {nav &&(
-              <div>
-              <ul className=' flex flex-col  justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-purple-900 text-gray-500'>
+              <div className=''>
+              <ul className=' flex flex-col  justify-center items-center absolute top-0 left-0 h-screen w-full  bg-gradient-to-b from-black to-purple-900 text-gray-500'>
                       <li className='  text-4xl py-8 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200'>   <Link
                                 onClick={() => setNav(!nav)}
-                                to='home'
-                                smooth
-                                duration={500}
+                                to='/'
                               >
                                 Home
                               </Link>
                               </li>
                       <li className=' text-4xl py-8 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200'> <Link
                                 onClick={() => setNav(!nav)}
-                                to='about'
+                                to='/about'
                                 smooth
                                 duration={500}
                               >
@@ -53,7 +51,7 @@ const Navbar = () => {
                               </Link> </li>
                       <li className=' text-4xl py-8 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200'> <Link
                                 onClick={() => setNav(!nav)}
-                                to='portfolio'
+                                to='/portfolio'
                                 smooth
                                 duration={500}
                               >
@@ -61,7 +59,7 @@ const Navbar = () => {
                               </Link> </li>
                       <li className=' text-4xl py-8 cursor-pointer capitalize text-orange-500 hover:scale-110 duration-200'> <Link
                                 onClick={() => setNav(!nav)}
-                                to='experience'
+                                to='/experience'
                                 smooth
                                 duration={500}
                               >
@@ -69,7 +67,7 @@ const Navbar = () => {
                               </Link> </li>
                       <li className='text-4xl py-8 cursor-pointer capitalize  text-orange-500 hover:scale-110 duration-200'> <Link
                                 onClick={() => setNav(!nav)}
-                                to='contact'
+                                to='/contact'
                                 smooth
                                 duration={500}
                               >
